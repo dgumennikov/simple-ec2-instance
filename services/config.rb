@@ -67,7 +67,7 @@ coreo_aws_ec2_instance "${SERVER_NAME}${SUFFIX}" do
   action :define
   image_id "${SERVER_AMI}"
   size "${SERVER_SIZE}"
-  security_groups ["${SERVER_NAME}"]
+  security_groups ["${SERVER_NAME}${SUFFIX}"]
 #  role "${SERVER_NAME}"
   ssh_key "${SERVER_KEYPAIR}"
   disks [
@@ -82,6 +82,6 @@ coreo_aws_ec2_autoscaling "${SERVER_NAME}${SUFFIX}" do
   action :sustain 
   minimum 1
   maximum 1
-  server_definition "${SERVER_NAME}"
+  server_definition "${SERVER_NAME}${SUFFIX}"
   subnet "${PUBLIC_SUBNET_NAME}"
 end
