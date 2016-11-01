@@ -78,7 +78,7 @@ variables:
     type: string
   SERVER_AMI:
     description: the ami id of the vpn
-    switch: INSTANCE::region
+    switch: PLAN::region
     cases:
       us-east-1: ami-70ca9115
       us-west-1: ami-9e3779fe
