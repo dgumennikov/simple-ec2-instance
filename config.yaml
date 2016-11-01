@@ -80,7 +80,8 @@ variables:
     description: the ami id of the vpn
     switch: INSTANCE::region
     cases:
-      us-east-1: ami-70ca9115
+      us-east-1: ami-4487fc53
+      us-east-2: ami-70ca9115
       us-west-1: ami-9e3779fe
       us-west-2: ami-dd4894bd
       ap-south-1:  ami-cec2b7a1
@@ -91,7 +92,8 @@ variables:
       eu-central-1: ami-a74ab7c8
       eu-west-1: ami-64105517
       sa-east-1: ami-5075e63c
-    type: case
+    type: string
+
 
 #HVM, Instance Store, 64-bit
 #Amazon Linux AMI 2016.09.0 was released on 2016-09-27.
