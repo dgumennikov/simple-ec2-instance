@@ -10,3 +10,91 @@
 ##   internet_gateway true
 ## end
 ##
+variables:
+  SERVER_INGRESS_CIDRS:
+    default:
+    description:
+    overrides:
+    required: true
+    type: array
+  SERVER_INGRESS_PORTS:
+    default:
+      - 80
+      - 22
+    description: Ports to open up in the server security group
+    required: true
+    type: array
+  SERVER_KEYPAIR:
+    description: the name of the keypair to launch server with
+    require: true
+  SERVER_NAME:
+    default: simple-server
+    description: the name of the server
+    required: true
+  SERVER_SIZE:
+    default: t2.small
+    description: the size of the server to launch
+    required: true
+  # PRIVATE_SUBNET_NAME:
+  #   default:
+  #   description:
+  #   overrides:
+  #   required: true
+  #   type:
+  PUBLIC_SUBNET_NAME:
+    default:
+    description:
+    overrides:
+    required: true
+    type:
+  REGION:
+    default: INSTANCE::region
+    description: 
+    overrides:
+    required: true
+    type:
+  VPC_NAME:
+    default:
+    description:
+    overrides:
+    required: true
+    type:
+  SUFFIX:
+    required: false
+    description: when used will use the value to suffix the names of all converged objects
+    type: string
+  SERVER_AMI_ID:
+    description: the ami id of the vpn
+    switch: INSTANCE::region
+    cases:
+      us-east-1: ami-70ca9115
+      us-west-1: ami-9e3779fe
+      us-west-2: ami-dd4894bd
+      ap-south-1:  ami-cec2b7a1
+      ap-northeast-2: ami-d34c99bd
+      ap-southeast-1: ami-4841e42b
+      ap-southeast-2: ami-fbd6e698
+      ap-northeast-1: ami-9016c4f1
+      eu-central-1: ami-a74ab7c8
+      eu-west-1: ami-64105517
+      sa-east-1: ami-5075e63c
+    type: case
+
+#HVM, Instance Store, 64-bit
+#Amazon Linux AMI 2016.09.0 was released on 2016-09-27.
+
+# US East (N. Virginia) us-east-1 ami-4487fc53
+# US East (Ohio)  us-east-2 ami-70ca9115
+# US West (N. California) us-west-1 ami-9e3779fe
+# US West (Oregon)  us-west-2 ami-dd4894bd
+# Asia Pacific (Mumbai) ap-south-1  ami-cec2b7a1
+# Asia Pacific (Seoul)  ap-northeast-2 ami-d34c99bd
+# Asia Pacific (Singapore)  ap-southeast-1 ami-4841e42b
+# Asia Pacific (Sydney) ap-southeast-2 ami-fbd6e698
+# Asia Pacific (Tokyo)  ap-northeast-1 ami-9016c4f1
+# EU (Frankfurt)  eu-central-1 ami-a74ab7c8
+# EU (Ireland)  eu-west-1 ami-64105517
+# South America (São Paulo) sa-east-1 ami-5075e63c
+
+
+
