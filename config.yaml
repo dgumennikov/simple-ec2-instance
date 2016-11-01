@@ -48,6 +48,12 @@ variables:
     overrides:
     required: true
     type:
+  PUBLIC_ROUTE_NAME:
+    default:
+    description:
+    overrides:
+    required: true
+    type:
   REGION:
     default: INSTANCE::region
     description: 
@@ -55,6 +61,12 @@ variables:
     required: true
     type:
   VPC_NAME:
+    default:
+    description:
+    overrides:
+    required: true
+    type:
+  VPC_CIDR:
     default:
     description:
     overrides:
