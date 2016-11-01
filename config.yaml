@@ -63,7 +63,7 @@ variables:
     required: false
     description: when used will use the value to suffix the names of all converged objects
     type: string
-  SERVER_AMI_ID:
+  SERVER_AMI:
     description: the ami id of the vpn
     switch: INSTANCE::region
     cases:
