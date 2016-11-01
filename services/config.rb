@@ -57,7 +57,7 @@ coreo_aws_ec2_instance "${SERVER_NAME}${SUFFIX}" do
         ]
 end
 
-coreo_aws_ec2_autoscaling "${SERVER_NAME}${SUFFIXX}" do
+coreo_aws_ec2_autoscaling "${SERVER_NAME}${SUFFIX}" do
   action :sustain 
   minimum 1
   maximum 1
