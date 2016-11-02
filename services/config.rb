@@ -70,12 +70,19 @@ coreo_aws_ec2_instance "${SERVER_NAME}${SUFFIX}" do
   security_groups ["${SERVER_NAME}${SUFFIX}"]
 #  role "${SERVER_NAME}"
   ssh_key "${SERVER_KEYPAIR}"
+  associate_public_ip: true
+  upgrade_trigger: "2"
   disks [
          {
            :device_name => "/dev/xvda",
            :volume_size => 16
          }
         ]
+  variables [
+         "ENV=my_env",
+         "TEST=true",
+         "CLOUD=coreo"
+          ]
 end
 
 coreo_aws_ec2_autoscaling "${SERVER_NAME}${SUFFIX}" do
