@@ -78,7 +78,7 @@ coreo_aws_ec2_instance "${SERVER_NAME}${SUFFIX}" do
            :volume_size => 16
          }
         ]
-  variables [
+  environment_variables [
          "ENV=my_env",
          "TEST=true",
          "CLOUD=coreo"
