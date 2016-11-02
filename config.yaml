@@ -92,7 +92,7 @@ variables:
       eu-central-1: ami-0044b96f
       eu-west-1: ami-d41d58a7
       sa-east-1: ami-b777e4db
-    type: string
+    type: case
 
 
 #HVM, Instance Store, 64-bit
