@@ -61,19 +61,13 @@ variables:
         description: the size of the server to launch
         required: true
     TIMEZONE:
-        default: America/Chicago
-        value: America/Chicago
+        default: America/Los_Angeles
+        value: America/Los_Angeles
         description: the timezone the servers should come up in
         overrides: null
         required: true
         type: string
-    VPC_TAGS:
-        required: false
-        description: tags to apply to the vpc
-        type: array
-        default: null
-#Amazon Linux AMI 2016.09.0 was released on 2016-09-27.
-        SERVER_AMI:
+    SERVER_AMI:
         description: the ami id of the server
         switch: "INSTANCE::region"
         cases:
@@ -103,3 +97,7 @@ variables:
         description: "If you have a datadog key, enter it here and we will install the agent"
         overrides: null
         required: false
+
+# AMI's are for:
+#   Amazon Linux AMI 2016.09.0 was released on 2016-09-27.
+
