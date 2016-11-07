@@ -23,26 +23,26 @@
 ## end
 ##
 
-# these three resources find the VPC/subnet you want to start this server in
-# they are :find so if they do not exist, this composite will throw an error
-# use this composite in conjunction with another composite (run before) like vpc-network-only
-#
-coreo_aws_vpc_vpc "${VPC_NAME}" do
-  action :find
-  cidr "${VPC_CIDR}"
-  internet_gateway true
-end
+# # these three resources find the VPC/subnet you want to start this server in
+# # they are :find so if they do not exist, this composite will throw an error
+# # use this composite in conjunction with another composite (run before) like vpc-network-only
+# #
+# coreo_aws_vpc_vpc "${VPC_NAME}" do
+#   action :find
+#   cidr "${VPC_CIDR}"
+#   internet_gateway true
+# end
 
-coreo_aws_vpc_routetable "${PUBLIC_ROUTE_NAME}" do
-  action :find
-  vpc "${VPC_NAME}"
-end
+# coreo_aws_vpc_routetable "${PUBLIC_ROUTE_NAME}" do
+#   action :find
+#   vpc "${VPC_NAME}"
+# end
 
-coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}" do
-  action :find
-  route_table "${PUBLIC_ROUTE_NAME}"
-  vpc "${VPC_NAME}"
-end
+# coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}" do
+#   action :find
+#   route_table "${PUBLIC_ROUTE_NAME}"
+#   vpc "${VPC_NAME}"
+# end
 
 coreo_aws_ec2_securityGroups "${SERVER_NAME}${SUFFIX}" do
   action :sustain
