@@ -65,7 +65,7 @@ end
 
 coreo_aws_ec2_instance "${SERVER_NAME}${SUFFIX}" do
   action :define
-  image_id "${SERVER_AMI}"
+  image_id "${AWS_LINUX_AMI}"
   size "${SERVER_SIZE}"
   security_groups ["${SERVER_NAME}${SUFFIX}"]
 #  role "${SERVER_NAME}"
