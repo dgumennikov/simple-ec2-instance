@@ -72,12 +72,12 @@ This repo is designed to work with CloudCoreo. It creates a simple server instan
   * default: America/Los_Angeles
 
 
-## Optional variables with no default
+## Optional variables with default
 
 **None**
 
 
-## Optional variables with default
+## Optional variables with no default
 
 ### `SERVER_KEYPAIR`:
   * description: the name of the keypair to launch server with
