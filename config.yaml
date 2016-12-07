@@ -69,7 +69,7 @@ variables:
         type: string
     SERVER_KEYPAIR:
         description: the name of the keypair to launch server with
-        require: true
+        required: true
     SUFFIX:
         required: false
         description: when used will use the value to suffix the names of all converged objects
@@ -80,5 +80,3 @@ variables:
         description: "If you have a datadog key, enter it here and we will install the agent"
         overrides: null
         required: false
-
-
