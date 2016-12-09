@@ -1,0 +1,1 @@
+![icon](https://raw.githubusercontent.com/CloudCoreo/simple-ec2-instance/master/images/icon.png "icon")
