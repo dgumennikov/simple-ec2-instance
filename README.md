@@ -14,7 +14,8 @@ This repo is designed to work with CloudCoreo. It creates a simple server instan
 
 ## Required variables with no default
 
-**None**
+### `SERVER_KEYPAIR`:
+  * description: the name of the keypair to launch server with
 
 
 ## Required variables with default
@@ -78,9 +79,6 @@ This repo is designed to work with CloudCoreo. It creates a simple server instan
 
 
 ## Optional variables with no default
-
-### `SERVER_KEYPAIR`:
-  * description: the name of the keypair to launch server with
 
 ### `SUFFIX`:
   * description: when used will use the value to suffix the names of all converged objects
