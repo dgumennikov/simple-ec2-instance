@@ -100,5 +100,5 @@ This repo is designed to work with CloudCoreo. It creates a simple server instan
 
 
 ## Icon
-
+![icon](https://raw.githubusercontent.com/CloudCoreo/simple-ec2-instance/master/images/icon.png "icon")
 
