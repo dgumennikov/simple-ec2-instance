@@ -80,6 +80,3 @@ variables:
         description: "If you have a datadog key, enter it here and we will install the agent"
         overrides: null
         required: false
-    MATTES_DUMMY_VAR:
-        default: "hello"
-        required: true
