@@ -80,7 +80,7 @@ variables:
         description: "If you have a datadog key, enter it here and we will install the agent"
         overrides: null
         required: false
-	AWS_LINUX_AMI:
+    AWS_LINUX_AMI:
       description: the ami id for latest AWS Linux
       switch: "PLAN::region"
       cases:
