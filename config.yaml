@@ -77,13 +77,13 @@ variables:
     DATADOG_KEY:
         default: null
         value: null
-        description: "If you have a datadog key, enter it here and we will install the agent"
+        description: If you have a datadog key, enter it here and we will install the agent
         overrides: null
         required: false
     AWS_LINUX_AMI:
-      description: the ami id for latest AWS Linux
-      switch: "PLAN::region"
-      cases:
+    description: the ami id for latest AWS Linux
+    switch: PLAN::region
+    cases:
         us-east-1: ami-b73b63a0
         us-east-2: ami-58277d3d
         us-west-1: ami-23e8a343
